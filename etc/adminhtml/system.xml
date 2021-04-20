@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Convert" translate="label" sortOrder="100">
+            <label>Convert</label>
+        </tab>
+        <section id="freeshippingbar" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Free Shipping</label>
+            <tab>Convert</tab>
+            <resource>Convert_FreeShipping::config_freeshippingbar</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title_freeshipping" translate="label comment" type="text" sortOrder="2"  showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>The extra amount needed to get free is still transferred</label>
+                </field>
+                <field id="freeshipping" translate="label comment" type="text" sortOrder="2"  showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Message freeshipping</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
