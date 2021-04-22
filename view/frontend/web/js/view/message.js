@@ -16,7 +16,9 @@
     'use strict';
 
     return Component.extend({
-
+        defaults: {
+            template: 'AHT_Checkout/minicart/content_message',
+        },
         freeShippingSub: window.checkout.freeShippingSubtotal,
         sym_bol: window.checkout.symbol,
         messs: window.checkout.mess,
@@ -26,8 +28,10 @@
             var freeShippingSub =this.freeShippingSub;
             var sym_bol =this.sym_bol;
             var mess_freee =this.mess_freee;
-            var message = this.messs.replace('%1',sym_bol+(freeShippingSub-subtotalAmount));
-            if(subtotalAmount < freeShippingSub){
+            // var message = this.messs.replace('%1',sym_bol+(freeShippingSub-subtotalAmount));
+            var message = "You are "+ sym_bol + (freeShippingSub-subtotalAmount) + " away from free shipping";
+
+            if(Number(subtotalAmount) < Number(freeShippingSub)){
                 return message;
             }else{
                 return mess_freee;

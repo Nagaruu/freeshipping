@@ -1,11 +1,4 @@
-<?xml version="1.0"?>
-<!--
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="minicart">
             <arguments>
@@ -13,18 +6,15 @@
                     <item name="types" xsi:type="array"/>
                     <item name="components" xsi:type="array">
                         <item name="minicart_content" xsi:type="array">
-                            <item name="component" xsi:type="string">Magento_Checkout/js/view/minicart</item>
-                            <item name="config" xsi:type="array">
-                                <item name="template" xsi:type="string">Magento_Checkout/minicart/content</item>
-                            </item>
                             <item name="children" xsi:type="array">
                                 <item name="extra_info" xsi:type="array">
+                                    <item name="component" xsi:type="string">uiComponent</item>
+                                    <item name="config" xsi:type="array">
+                                        <item name="displayArea" xsi:type="string">extraInfo</item>uiComponent
+                                    </item>
                                     <item name="children" xsi:type="array">
                                         <item name="subtotal" xsi:type="array">
-                                            <item name="component" xsi:type="string">AHT_Checkout/js/view/minicart</item>
-                                            <item name="config" xsi:type="array">
-                                                <item name="template" xsi:type="string">AHT_Checkout/minicart/content</item>
-                                            </item>
+                                            <item name="component" xsi:type="string">AHT_Checkout/js/view/message</item>
                                         </item>
                                     </item>
                                 </item>

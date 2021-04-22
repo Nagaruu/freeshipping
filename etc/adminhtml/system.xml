@@ -16,9 +16,6 @@
                     <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="title_freeshipping" translate="label comment" type="text" sortOrder="2"  showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>The extra amount needed to get free is still transferred</label>
-                </field>
                 <field id="freeshipping" translate="label comment" type="text" sortOrder="2"  showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Message freeshipping</label>
                 </field>
