@@ -54,7 +54,7 @@ class ConfigPlugin
         if($enable  == 1){
                 $result['freeShippingSubtotal'] = $FreeShippingSubtotal;
                 $result['symbol'] = $symbol;
-                // $result['mess'] = $mess;
+                $result['currency'] = $currencycode;
                 $result['mess_free'] = $mess_free;  
         }
         return $result;

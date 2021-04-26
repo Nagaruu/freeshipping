@@ -107,14 +107,6 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return $this->currency;
     }
-//    public function isEnabled($scope = ScopeInterface::SCOPE_STORE)
-//    {
-//        return (bool) $this->scopeConfig->isSetFlag(
-//            'additional_registration_fields/general/enable',
-//            $scope
-//        );
-//    }
-
     /**
      * @return bool
      */

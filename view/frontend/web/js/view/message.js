@@ -28,13 +28,14 @@
             var freeShippingSub =this.freeShippingSub;
             var sym_bol =this.sym_bol;
             var mess_freee =this.mess_freee;
-            // var message = this.messs.replace('%1',sym_bol+(freeShippingSub-subtotalAmount));
             var message = "You are "+ sym_bol + (freeShippingSub-subtotalAmount) + " away from free shipping";
 
-            if(Number(subtotalAmount) < Number(freeShippingSub)){
+            if(Number(subtotalAmount) < Number(freeShippingSub) && subtotalAmount!=0 ){
                 return message;
-            }else{
+            }else if(Number(subtotalAmount) >= Number(freeShippingSub)){
                 return mess_freee;
+            }else {
+                return null;
             }
         }
     });

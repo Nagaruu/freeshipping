@@ -1,0 +1,24 @@
+<?php
+    $free = $block->getFreeShippingSubtotal();
+    $amountsub = $block->amountsub();
+    $amountsub1 = $block->orderTotal()->getData();
+    $need_free = $free-$amountsub;
+    $currencySymbols = $block->getStoreCurrency();
+    $mess = __($block->mess(),$currencySymbols.$need_free);
+    $messfree = $block->messfree();
+    $enable = $block->isEnable();
+    $freeShipping_status = $block->getFreeShippingStatus();
+?>
+
+<?php if ($enable == 1) :?>
+    <?php if ($amountsub < $free && $amountsub >= 0) :?>
+        <h2>You <?= $currencySymbols . $need_free  ?> away from free shipping</h2>
+    <?php endif;?>
+    <?php if ($amountsub >= $free) :?>
+        <h2>You are get free shipping</h2>
+    <?php endif ;?>
+<?php endif ;?>
+
+
+
+
